@@ -1,0 +1,132 @@
+@import lib/bootstrap.min.css
+// fonts
+$default-fonts: Arial, sans-serif
++font('Roboto Condensed Bold', 'RobotoCondensed-Bold')
++font('Roboto Medium', 'Roboto-Medium')
++font('Circe Thin', 'Circe-Thin')
++font('Circe Light', 'Circe-Light')
++font('Circe Regular', 'Circe-Regular')
++font('Circe Bold', 'Circe-Bold')
++font('Circe Extra Bold', 'Circe-ExtraBold')
+$roboto-bold: 'Roboto Condensed Bold', $default-fonts
+$roboto-medium: 'Roboto Medium', $default-fonts
+$circe-thin: 'Circe Thin', $default-fonts
+$circe-light: 'Circe Light', $default-fonts
+$circe: 'Circe Regular', $default-fonts
+$circe-bold: 'Circe Bold', $default-fonts
+$circe-ebold: 'Circe Extra Bold', $default-fonts
+
+// colors
+$black: #353535
+$orange: #fc491e
+$blue: #07478d
+
+/* ==========================================================================
+	 Main Styles
+	 ========================================================================== */
+a:hover, a:focus
+	text-decoration: none
+a
+	color: inherit
+	text-decoration: none
+svg
+	width: 100%
+	height: 100%
+.is-hidden
+	display: none
+// *
+// 	+selection
+// 		color: #fff
+// 		background-color: $red
+body
+	min-width: 320px
+	font-size: 18px
+	font-family: $circe-light
+	color: $black
+	line-height: 1.1
+.wrap
+	+container
+	transition: all 0.3s
+/* ==========================================================================
+	 Header
+	 ========================================================================== */
+.header
+	&__top
+		padding-top: 5px
+		padding-bottom: 10px
+		font-family: $circe
+		color: #ffffff
+		background-color: $black
+		+container
+		&-col
+			+span(4)
+			&--center
+				text-align: center
+	&__mail
+		display: block
+		margin-top: 15px
+		font-size: 20px
+	&__phone
+		font-size: 20px
+		span
+			font-family: $circe-light
+		&-request
+			display: inline-block
+			font-size: 15px
+			border-bottom: 1px solid #ffffff
+	&__request
+		float: right
+		margin-top: 4px
+		padding-left: 20px
+		padding-right: 20px
+		line-height: 43px
+		border: 1px solid #ffffff
+		border-radius: 23px
+	.icon
+		display: inline-block
+		&-phone
+			position: relative
+			top: 4px
+			margin-left: -22px
+			margin-right: 5px
+	&__bot
+		padding-top: 35px
+		padding-bottom: 5px
+		+container
+	&__logo
+		text-align: center
+		+span(full)
+		&-link
+			display: inline-block
+	.nav
+		margin-top: 30px
+.nav
+	+span(full)
+	&__list
+		display: table
+		width: 100%
+	&__item
+		display: table-cell
+		padding: 7px 20px 3px
+		text-align: center
+		&:first-child
+			font-family: $circe
+			text-transform: uppercase
+			border: 1px solid $black
+			border-radius: 16px
+	&__link
+		display: block
+
+/* ==========================================================================
+	 Footer
+	 ========================================================================== */
+.footer
+/* ==========================================================================
+	 Main
+	 ========================================================================== */
+
+/* ==========================================================================
+	 Other Styles
+	 ========================================================================== */
+.clearfix
+	+clearfix

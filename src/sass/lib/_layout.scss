@@ -1,0 +1,11 @@
+$susy: (
+	container: 1200px,
+	columns: 12,
+	gutters: 3/7,
+	gutter-position: split,
+	debug: (
+		image: show,
+		color: rgba(#cb3030, .25),
+		inspect: true,
+	),
+);
