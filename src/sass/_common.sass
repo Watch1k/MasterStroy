@@ -1,4 +1,3 @@
-@import lib/bootstrap.min.css
 // fonts
 $default-fonts: Arial, sans-serif
 +font('Roboto Condensed Bold', 'RobotoCondensed-Bold')
@@ -46,7 +45,6 @@ body
 	line-height: 1.1
 .wrap
 	+container
-	transition: all 0.3s
 /* ==========================================================================
 	 Header
 	 ========================================================================== */
@@ -57,7 +55,6 @@ body
 		font-family: $circe
 		color: #ffffff
 		background-color: $black
-		+container
 		&-col
 			+span(4)
 			&--center
@@ -124,9 +121,45 @@ body
 /* ==========================================================================
 	 Main
 	 ========================================================================== */
+/*------------ Screen Section -------------*/
+.screen
+	background: url('../img/bg/bg-1.jpg') center center no-repeat
+	background-size: cover
+	&__container
+		padding-top: 75px
+		padding-bottom: 75px
+		+container
+	&__title
+		font-size: 66px
+		color: $blue
+		text-align: center
+		+span(4 no-gutters)
+		+push(2)
+		&-top
+			display: block
+			line-height: 1.4
+			border-bottom: 2px solid $orange
+		&-bot
+			display: block
+			font-family: $circe
+			line-height: 1.4
+	.category
+		+span(3)
+		+push(3)
+.category
+	background-color: #fff
 
+/*------------  -------------*/
+/*------------  -------------*/
+/*------------  -------------*/
+/*------------  -------------*/
+/*------------  -------------*/
+/*------------  -------------*/
+/*------------  -------------*/
+/*------------  -------------*/
 /* ==========================================================================
 	 Other Styles
 	 ========================================================================== */
 .clearfix
 	+clearfix
+
