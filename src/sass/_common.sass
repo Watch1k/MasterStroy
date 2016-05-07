@@ -23,6 +23,11 @@ $blue: #07478d
 /* ==========================================================================
 	 Main Styles
 	 ========================================================================== */
+button
+	font-family: inherit
+	font-size: inherit
+	color: inherit
+	line-height: inherit
 a:hover, a:focus
 	text-decoration: none
 a
@@ -95,9 +100,9 @@ body
 		+span(full)
 		&-link
 			display: inline-block
-	.nav
-		margin-top: 30px
 .nav
+	&_header
+		margin-top: 30px
 	+span(full)
 	&__list
 		display: table
@@ -130,24 +135,65 @@ body
 		padding-bottom: 75px
 		+container
 	&__title
+		margin-top: 150px
 		font-size: 66px
 		color: $blue
 		text-align: center
 		+span(4 no-gutters)
 		+push(2)
 		&-top
-			display: block
+			display: inline-block
 			line-height: 1.4
 			border-bottom: 2px solid $orange
 		&-bot
-			display: block
+			display: inline-block
 			font-family: $circe
 			line-height: 1.4
-	.category
+.category
+	&_screen
 		+span(3)
 		+push(3)
-.category
-	background-color: #fff
+	&_provider
+		position: relative
+		top: -57px
+		+span(3)
+	&__title
+		padding: 20px 30px 15px
+		font-family: $circe
+		font-size: 20px
+		color: #ffffff
+		background-color: $orange
+	&__list
+		padding: 20px 30px 20px 50px
+		line-height: 1
+		list-style-type: disc
+		background-color: #ffffff
+		border: 1px solid #f0f0f0
+	&__item
+		& + &
+			margin-top: 15px
+	&__caption
+		padding: 25px 30px
+		font-family: $circe
+		color: #ffffff
+		line-height: 1
+		text-align: center
+		background-color: $blue
+	&__btn
+		display: block
+		width: 100%
+		padding: 12px 5px 14px
+		background-color: transparent
+		border: 1px solid #ffffff
+		border-radius: 25px
+		&_mod
+			padding-left: 30px
+			padding-right: 30px
+	&__vs
+		margin-top: 15px
+		margin-bottom: 15px
+.provider
+	+container
 
 /*------------  -------------*/
 /*------------  -------------*/
