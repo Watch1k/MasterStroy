@@ -102,6 +102,7 @@ body
 		+span(full)
 		&-link
 			display: inline-block
+/*---------------------- Navigation -----------------------*/
 .nav
 	+span(full)
 	&_header
@@ -172,7 +173,7 @@ body
 /* ==========================================================================
 	 Main
 	 ========================================================================== */
-/*------------ Screen Section -------------*/
+/*---------------------- Screen -----------------------*/
 .screen
 	padding-top: 75px
 	padding-bottom: 75px
@@ -194,6 +195,7 @@ body
 			display: inline-block
 			font-family: $circe
 			line-height: 1.4
+/*---------------------- Category -----------------------*/
 .category
 	&_screen
 		+span(3)
@@ -238,6 +240,7 @@ body
 	&__vs
 		margin-top: 15px
 		margin-bottom: 15px
+/*---------------------- Provider -----------------------*/
 .provider
 	padding-top: 35px
 	&__col
@@ -261,6 +264,7 @@ body
 			width: 100%
 			height: auto
 			vertical-align: bottom
+/*---------------------- Data -----------------------*/
 .data
 	padding-top: 35px
 	padding-bottom: 50px
@@ -331,6 +335,7 @@ body
 		font-family: $circe-light
 		font-size: 18px
 		color: #ffffff
+/*---------------------- Advert -----------------------*/
 .ad
 	padding-top: 60px
 	padding-bottom: 75px
@@ -345,6 +350,7 @@ body
 		font-weight: normal
 		+span(18 of 24)
 		+push(3 of 24)
+/*---------------------- Type -----------------------*/
 .type
 	padding-top: 40px
 	padding-bottom: 80px
@@ -379,6 +385,7 @@ body
 		left: 52%
 		padding-right: 15px
 		cursor: pointer
+/*---------------------- Purchase -----------------------*/
 .purchase
 	max-width: 100wv
 	overflow: hidden
@@ -481,6 +488,7 @@ body
 		&-text
 			overflow: hidden
 			margin-top: 10px
+/*---------------------- Result -----------------------*/
 .result
 	padding-top: 40px
 	padding-bottom: 40px
@@ -545,6 +553,7 @@ body
 		font-size: 18px
 		text-align: center
 		background-color: #ffffff
+/*---------------------- Request -----------------------*/
 .request
 	padding-top: 60px
 	padding-bottom: 75px
@@ -617,6 +626,7 @@ body
 		padding-top: 70px
 		padding-left: 12%
 		background-color: $black
+/*---------------------- Mail -----------------------*/
 .mail
 	+clearfix
 	&__input
@@ -645,6 +655,7 @@ body
 		text-align: center
 		vertical-align: middle
 		border: none
+/*---------------------- Arguments -----------------------*/
 .args
 	font-family: $circe
 	&__title
@@ -689,6 +700,7 @@ body
 		margin-bottom: 20px
 	&__desc
 		margin-top: 15px
+/*---------------------- Terms -----------------------*/
 .terms
 	padding-top: 60px
 	background-color: #f9f9f9
@@ -729,6 +741,7 @@ body
 			background-color: $orange
 		&-desc
 			margin-top: 7px
+/*---------------------- Comments -----------------------*/
 .comments
 	padding-top: 50px
 	padding-bottom: 50px
@@ -772,6 +785,7 @@ body
 			margin-top: 10px
 			& + p
 				margin-top: 15px
+/*---------------------- Certificate -----------------------*/
 .cert
 	&__title
 		font-family: $circe
@@ -784,6 +798,7 @@ body
 		+prefix(2*gutter())
 		+suffix(2*gutter())
 		text-align: center
+/*---------------------- Slider -----------------------*/
 .slider
 	+span(10)
 	+pre(1)
@@ -799,6 +814,7 @@ body
 	top: -25%
 	transform: scale(1.25,1.25)
 	transition: all 0.4s
+/*---------------------- Action -----------------------*/
 .action
 	padding-top: 40px
 	padding-bottom: 50px
@@ -823,6 +839,7 @@ body
 	&__subtitle
 		margin-top: 30px
 		text-align: center
+/*---------------------- Counter -----------------------*/
 .counter
 	text-align: center
 	font-family: $roboto-medium
@@ -872,6 +889,7 @@ body
 			left: 146px
 		&_4
 			left: 219px
+/*---------------------- Ask -----------------------*/
 .ask
 	overflow: hidden
 	padding-top: 40px
@@ -946,6 +964,7 @@ body
 			height: 40px
 			line-height: 40px
 			background-color: $orange
+/*---------------------- Map -----------------------*/
 .map
 	padding-top: 40px
 	padding-bottom: 50px
@@ -983,17 +1002,59 @@ body
 	margin-top: 40px
 	height: 540px
 
-/*------------  -------------*/
-/*------------  -------------*/
-/*------------  -------------*/
-/*------------  -------------*/
-/*------------  -------------*/
-/*------------  -------------*/
-/*------------  -------------*/
-/*------------  -------------*/
 /* ==========================================================================
 	 Other Styles
 	 ========================================================================== */
 .clearfix
 	+clearfix
-
+/*---------------------- Popup -----------------------*/
+.popup
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 99
+	background-color: rgba(0,0,0,.8)
+	cursor: pointer
+	&__in
+		width: 290px
+		background-color: #ffffff
+		cursor: default
+		+vcenter
+	&__title
+		height: 54px
+		font-family: $circe
+		font-size: 20px
+		color: #ffffff
+		line-height: 54px
+		text-align: center
+		background-color: $orange
+	&__content
+		padding: 40px 20px 25px
+	&__input
+		padding-left: 15px
+		padding-right: 15px
+		height: 40px
+		width: 100%
+		font-size: 18px
+		color: $black
+		line-height: 40px
+		background-color: transparent
+		border: 1px solid #d6d6d6
+		& + &
+			margin-top: 5px
+	&__submit
+		margin-top: 20px
+		height: 40px
+		width: 100%
+		font-family: $circe
+		color: #ffffff
+		text-align: center
+		line-height: 40px
+		background-color: $blue
+		border-radius: 20px
+	&__desc
+		margin-top: 5px
+		font-size: 14px

@@ -82,8 +82,8 @@ gulp.task('sass', function() {
             console.error('Error', err.message);
         })
         .pipe(postcss(processors))
-        .pipe(cssmin())
-        .pipe(rename({suffix: '.min'}))
+        // .pipe(cssmin())
+        // .pipe(rename({suffix: '.min'}))
         // .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('build/css/'));
 });
