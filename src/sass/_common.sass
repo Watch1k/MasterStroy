@@ -103,9 +103,14 @@ body
 		&-link
 			display: inline-block
 .nav
+	+span(full)
 	&_header
 		margin-top: 30px
-	+span(full)
+	&_footer
+		color: #ffffff
+		.nav__item
+			&:first-child
+				border-color: #ffffff
 	&__list
 		display: table
 		width: 100%
@@ -125,6 +130,45 @@ body
 	 Footer
 	 ========================================================================== */
 .footer
+	&__top
+		padding-top: 20px
+		padding-bottom: 30px
+		color: #ffffff
+		background-color: $black
+	&__info
+		margin-top: 55px
+		+span(full no-gutters)
+	&__logo
+		+span(4)
+	&__position
+		+span(2 no-gutters)
+		+push(1)
+	&__mail
+		font-family: $circe
+		font-size: 20px
+		+span(2)
+	&__phone
+		+span(3)
+		span
+			display: inline-block
+			margin-right: 5px
+			white-space: pre
+	&__bot
+		padding-top: 10px
+		padding-bottom: 10px
+	&__copy
+		margin-top: 8px
+		font-size: 14px
+		+span(6)
+	&__social
+		text-align: right
+		+span(6)
+	&__icon
+		display: inline-block
+		vertical-align: middle
+	&__link
+		display: block
+
 /* ==========================================================================
 	 Main
 	 ========================================================================== */
@@ -289,7 +333,7 @@ body
 		color: #ffffff
 .ad
 	padding-top: 60px
-	padding-bottom: 60px
+	padding-bottom: 75px
 	text-align: center
 	&__title
 		font-size: 48px
@@ -349,7 +393,7 @@ body
 		line-height: 1
 		+span(2 of 6)
 		&:nth-child(3n)
-			+span(last)
+			+span(2 of 6 last)
 	&__img
 		img
 			width: 100%
@@ -413,7 +457,7 @@ body
 				left: 100%
 				top: 0
 				bottom: 0
-				width: 200%
+				width: 1000%
 				background-color: $black
 		&-title
 			font-family: $circe
@@ -437,6 +481,507 @@ body
 		&-text
 			overflow: hidden
 			margin-top: 10px
+.result
+	padding-top: 40px
+	padding-bottom: 40px
+	background-color: #eeeeee
+	+clearfix
+	&__title
+		padding-left: 120px
+		padding-right: 120px
+		font-size: 48px
+		font-weight: normal
+		line-height: 36px
+		text-align: center
+		+container
+	&__table
+		margin-top: 40px
+	&__thead
+		padding-bottom: 3px
+		font-family: $circe
+		font-size: 24px
+		border-bottom: 2px solid #aeaeae
+	&__tfoot
+		padding-top: 7px
+		font-family: $circe
+		font-size: 24px
+		border-top: 3px solid #aeaeae
+	&__inner
+		display: table
+		width: 100%
+	&__tr
+		padding-top: 12px
+		padding-bottom: 12px
+		border-top: 1px solid #aeaeae
+	&__td
+		display: table-cell
+		&:nth-child(1)
+			padding-right: 30px
+			width: 20%
+			text-align: right
+		&:nth-child(2)
+			padding-right: 30px
+			width: 35%
+		&:nth-child(3)
+			padding-right: 10px
+			width: 10%
+		&:nth-child(4)
+			padding-right: 10px
+			width: 10%
+		&:nth-child(5)
+			padding-right: 10px
+			width: 10%
+		&:nth-child(6)
+			padding-right: 10px
+			width: 20%
+	&__img
+		width: 110px
+		height: auto
+		vertical-align: middle
+	&__input
+		margin-right: 10px
+		width: 38px
+		height: 38px
+		font-size: 18px
+		text-align: center
+		background-color: #ffffff
+.request
+	padding-top: 60px
+	padding-bottom: 75px
+	&__title
+		font-family: $circe
+		font-size: 48px
+		line-height: 36px
+		text-align: center
+		+pre(1)
+		+post(1)
+	&__inner
+		position: relative
+		margin-top: 20px
+		padding-top: 40px
+		padding-left: 40px
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 160px
+			height: 230px
+			background-color: $blue
+			z-index: -1
+	&__desc
+		padding-top: 15px
+		padding-bottom: 60px
+		padding-left: 12%
+		color: #ffffff
+		background-color: $black
+		+clearfix
+	&__text
+		float: left
+		margin-right: 5%
+		width: 30%
+		font-family: $circe
+		p
+			font-size: 22px
+			line-height: 24px
+			& + p
+				font-size: 25px
+				& + p
+					font-size: 26px
+					letter-spacing: 0.2em
+	&__contacts
+		float: left
+		margin-top: -2px
+		width: 30%
+		text-align: right
+	&__email
+		display: block
+		margin-top: 5px
+		font-size: 20px
+	&__phone
+		font-size: 20px
+		span
+			font-family: $circe-light
+		&-request
+			display: inline-block
+			font-size: 15px
+			border-bottom: 1px solid #ffffff
+	.icon
+		display: inline-block
+		&-phone
+			position: relative
+			top: 4px
+			margin-left: -22px
+			margin-right: 5px
+	.mail
+		padding-top: 70px
+		padding-left: 12%
+		background-color: $black
+.mail
+	+clearfix
+	&__input
+		float: left
+		margin-right: 5%
+		padding-left: 15px
+		padding-right: 15px
+		width: 30%
+		font-size: 18px
+		color: $black
+		height: 43px
+		line-height: 43px
+		background-color: #ffffff
+		border: 1px solid #d6d6d6
+		vertical-align: middle
+		border: none
+		+placeholder-color($black)
+	&__submit
+		float: left
+		width: 20%
+		height: 43px
+		font-size: 18px
+		color: #ffffff
+		line-height: 43px
+		background-color: $orange
+		text-align: center
+		vertical-align: middle
+		border: none
+.args
+	font-family: $circe
+	&__title
+		padding-left: 300px
+		padding-right: 300px
+		padding-bottom: 30px
+		font-size: 48px
+		line-height: 36px
+		font-weight: normal
+		text-align: center
+		+container
+	&__bg
+		padding-top: 85px
+		padding-bottom: 60px
+		background: url('../img/bg/bg-3.jpg') center center no-repeat
+		background-size: cover
+	&__list
+		color: #ffffff
+		line-height: 1
+		+container
+	&__number
+		float: left
+		margin-right: 15px
+		margin-bottom: 6*gutter()
+		width: 84px
+		height: 84px
+		font-family: $circe-ebold
+		font-size: 60px
+		line-height: 90px
+		text-align: center
+		background-color: $orange
+	&__item
+		+gallery(6)
+		&_left
+			text-align: right
+			.args__number
+				float: right
+				margin-right: auto
+				margin-left: 15px
+	&__text
+		overflow: hidden
+		margin-bottom: 20px
+	&__desc
+		margin-top: 15px
+.terms
+	padding-top: 60px
+	background-color: #f9f9f9
+	.wrap
+		position: relative
+		height: 580px
+		background: url('../img/bg/bg-4.png') center 60px no-repeat
+		+container(1170px)
+		background-size: 100%
+	&__title
+		font-family: $circe
+		font-size: 48px
+		line-height: 36px
+		font-weight: normal
+		text-align: center
+	&__item
+		position: absolute
+		width: 20%
+		color: #ffffff
+		text-align: center
+		z-index: 1
+		&_1
+			top: 37%
+			left: 8%
+		&_2
+			top: 48%
+			left: 28.5%
+		&_3
+			top: 38%
+			left: 50%
+		&-title
+			display: inline-block
+			padding-left: 12px
+			padding-right: 12px
+			height: 35px
+			font-size: 24px
+			line-height: 35px
+			background-color: $orange
+		&-desc
+			margin-top: 7px
+.comments
+	padding-top: 50px
+	padding-bottom: 50px
+	&__title
+		font-family: $circe
+		font-size: 48px
+		line-height: 36px
+		font-weight: normal
+		text-align: center
+	&__list
+		margin-top: 25px
+		+clearfix
+	&__item
+		+span(6)
+		+clearfix
+	&__img
+		position: relative
+		+span(3 of 6 no-gutters)
+		+suffix(gutter())
+		+post(gutter())
+		img
+			width: 100%
+			height: auto
+			vertical-align: bottom
+	&__caption
+		position: absolute
+		left: 0
+		right: 4*gutter()
+		bottom: 0
+		height: 50px
+		font-size: 24px
+		color: #ffffff
+		line-height: 50px
+		text-align: center
+		background-color: $orange
+		z-index: 1
+	&__text
+		overflow: hidden
+		line-height: 1
+		p
+			margin-top: 10px
+			& + p
+				margin-top: 15px
+.cert
+	&__title
+		font-family: $circe
+		font-size: 48px
+		line-height: 36px
+		font-weight: normal
+		text-align: center
+	&__desc
+		margin-top: 30px
+		+prefix(2*gutter())
+		+suffix(2*gutter())
+		text-align: center
+.slider
+	+span(10)
+	+pre(1)
+	&__img
+		cursor: pointer
+		vertical-align: bottom
+.owl-stage
+	padding-top: 100px
+	padding-bottom: 100px
+.owl-item
+	transition: transform 0.4s
+.owl-item.center.active
+	top: -25%
+	transform: scale(1.25,1.25)
+	transition: all 0.4s
+.action
+	padding-top: 40px
+	padding-bottom: 50px
+	color: #ffffff
+	background: url('../img/bg/bg-5.jpg') center center no-repeat
+	background-size: cover
+	&__title
+		font-family: $circe
+		font-size: 36px
+		line-height: 24px
+		font-weight: normal
+		text-align: center
+	.mail
+		margin-top: 25px
+		+span(10)
+		+push(1)
+	&__desc
+		margin-top: 7px
+		margin-bottom: 40px
+		+span(10)
+		+push(1)
+	&__subtitle
+		margin-top: 30px
+		text-align: center
+.counter
+	text-align: center
+	font-family: $roboto-medium
+	font-size: 14px
+	&__in
+		position: relative
+		display: inline-block
+		margin-top: 20px
+		width: 293px
+		height: 102px
+	&__main
+		position: relative
+		z-index: 1
+		font-size: 40px
+		line-height: 70px
+		span
+			display: inline-block
+			width: 73px
+			text-align: center
+	&__date
+		position: absolute
+		bottom: 9px
+		left: 0
+		right: 0
+		font-size: 14px
+		line-height: 1
+		text-align: center
+	&__rect
+		position: absolute
+		top: 0
+		bottom: 0
+		width: 74px
+		border: 1px solid $orange
+		&:before
+			content: ''
+			position: absolute
+			top: 2px
+			left: 2px
+			right: 2px
+			height: 70px
+			background-color: $orange
+		&_1
+			left: 0
+		&_2
+			left: 73px
+		&_3
+			left: 146px
+		&_4
+			left: 219px
+.ask
+	overflow: hidden
+	padding-top: 40px
+	padding-bottom: 50px
+	&__col
+		+span(8)
+	&__title
+		font-family: $circe
+		font-size: 48px
+		line-height: 36px
+		font-weight: normal
+		text-align: center
+	&__subtitle
+		margin-top: 10px
+		font-size: 24px
+		text-align: center
+	&__list
+		margin-top: 40px
+	&__item
+		& + &
+			margin-top: 40px
+	&__question
+		display: inline-block
+		padding-left: 10px
+		padding-right: 10px
+		height: 40px
+		font-size: 24px
+		color: #ffffff
+		line-height: 40px
+		background-color: $blue
+	&__answer
+		margin-top: 20px
+	&__tool
+		position: relative
+		padding-top: 60px
+		color: #ffffff
+		line-height: 30px
+		+span(4)
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 15px
+			width: 220px
+			height: 458px
+			background-color: $blue
+			z-index: -1
+		&-in
+			position: relative
+			margin-left: 60px
+			padding: 30px 40px 144px
+			background-color: $black
+			&:after
+				content: ''
+				position: absolute
+				left: 100%
+				top: 0
+				bottom: 0
+				width: 1000%
+				background-color: $black
+		&-title
+			font-size: 24px
+			line-height: 18px
+		&-desc
+			margin-top: 20px
+		&-number
+			font-size: 24px
+		&-btn
+			margin-top: 20px
+			padding-left: 10px
+			padding-right: 10px
+			height: 40px
+			line-height: 40px
+			background-color: $orange
+.map
+	padding-top: 40px
+	padding-bottom: 50px
+	.wrap
+		position: relative
+	&__title
+		font-family: $circe
+		font-size: 48px
+		line-height: 48px
+		text-align: center
+		font-weight: normal
+		+span(8)
+		+push(2)
+		+prefix(3*gutter())
+		+suffix(3*gutter())
+	&__info
+		position: absolute
+		z-index: 1
+		top: 210px
+		right: 100px
+		padding: 30px 15px 40px 25px
+		width: 360px
+		color: #ffffff
+		background-color: $blue
+		&-small
+			margin-top: 35px
+			font-size: 16px
+	&__position
+		& + &
+			margin-top: 25px
+	&__desc
+		margin-top: 15px
+		+span(7)
+#map
+	margin-top: 40px
+	height: 540px
 
 /*------------  -------------*/
 /*------------  -------------*/

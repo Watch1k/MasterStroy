@@ -9,8 +9,22 @@
 	<meta name="theme-color" content="#fff">
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
-	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<link rel="stylesheet" media="all" href="css/screen.min.css" >
 	<!--[if IE]><script src="js/lib/html5shiv.js"></script><![endif]-->
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script>
+		function initialize() {
+			var mapProp = {
+				center:new google.maps.LatLng(51.508742,-0.120850),
+				zoom:15,
+				scrollwheel: false,
+				draggable: true,
+				mapTypeId:google.maps.MapTypeId.ROADMAP
+			};
+			var map=new google.maps.Map(document.getElementById("map"),mapProp);
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
 </head>
 <body>
 <header class="header" role="banner">
@@ -318,59 +332,357 @@
 		<h2 class="result__title">Оставьте заявку на расчет стоимости заказа и условий поставки</h2>
 		<div class="result__table">
 			<div class="result__thead">
+					<div class="wrap">
+						<div class="result__inner">
+							<div class="result__td"></div>
+							<div class="result__td">Наименование</div>
+							<div class="result__td">Кол-во</div>
+							<div class="result__td">Вес</div>
+							<div class="result__td">Цена</div>
+							<div class="result__td">Сумма</div>
+						</div>
+					</div>
+			</div>
+			<div class="result__tbody">
 				<div class="result__tr">
 					<div class="wrap">
-						<div class="result__td">Наименование</div>
-						<div class="result__td">Кол-во</div>
-						<div class="result__td"Вес</div>
-						<div class="result__td">Цена</div>
-						<div class="result__td">Сумма</div>
+						<div class="result__inner">
+							<div class="result__td">
+								<img src="img/content/table-1.jpg" alt="image" class="result__img">
+							</div>
+							<div class="result__td">ГКЛ] Гипсокартонный лист, КНАУФ (Knauf) (1,2*2,5м) 9,5мм</div>
+							<div class="result__td">
+								<input type="text" class="result__input" value="1">
+								<span class="result__input-desc">шт</span>
+							</div>
+							<div class="result__td">21.3 кг</div>
+							<div class="result__td">199 руб.</div>
+							<div class="result__td">199 руб.</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="result__tr">
+					<div class="wrap">
+						<div class="result__inner">
+							<div class="result__td">
+								<img src="img/content/table-1.jpg" alt="image" class="result__img">
+							</div>
+							<div class="result__td">ГКЛ] Гипсокартонный лист, КНАУФ (Knauf) (1,2*2,5м) 9,5мм</div>
+							<div class="result__td">
+								<input type="text" class="result__input" value="1">
+								<span class="result__input-desc">шт</span>
+							</div>
+							<div class="result__td">21.3 кг</div>
+							<div class="result__td">199 руб.</div>
+							<div class="result__td">199 руб.</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div>
-				<div class="result__tbody">
-					<!--begin result__tr-->
-					<div class="result__tr">
-						<div class="wrap">
-							<div class="result__td">
-								<img src="img/content/table-1.jpg" alt="image">
-								<span class="result__name">ГКЛ] Гипсокартонный лист, КНАУФ (Knauf) (1,2*2,5м) 9,5мм</span>
-							</div>
-							<div class="result__td">
-								<input type="text" class="result__input" value="1">
-								<span class="result__input-desc">шт</span>
-							</div>
-							<div class="result__td">21.3 кг</div>
-							<div class="result__td">199 руб.</div>
-							<div class="result__td">199 руб.</div>
-						</div>
-					</div>
-					<!--end result__tr-->
 
-					<!--begin result__tr-->
-					<div class="result__tr">
-						<div class="wrap">
-							<div class="result__td">
-								<img src="img/content/table-1.jpg" alt="image">
-								<span class="result__name">ГКЛ] Гипсокартонный лист, КНАУФ (Knauf) (1,2*2,5м) 9,5мм</span>
-							</div>
-							<div class="result__td">
-								<input type="text" class="result__input" value="1">
-								<span class="result__input-desc">шт</span>
-							</div>
-							<div class="result__td">21.3 кг</div>
-							<div class="result__td">199 руб.</div>
-							<div class="result__td">199 руб.</div>
-						</div>
+			<div class="result__tfoot">
+				<div class="wrap">
+					<div class="result__inner">
+						<div class="result__td"></div>
+						<div class="result__td">Итого:</div>
+						<div class="result__td">2 шт</div>
+						<div class="result__td">42.6 кг</div>
+						<div class="result__td">398 руб</div>
+						<div class="result__td">398 руб</div>
 					</div>
-					<!--end result__tr-->
 				</div>
 			</div>
 		</div>
 	</section>
 	<!--end result-->
+
+	<!--begin request-->
+	<section class="request wrap">
+		<h2 class="request__title">Оставьте заявку на расчет стоимости заказа и условий поставки</h2>
+		<div class="request__inner">
+			<!--begin mail-->
+			<form action="#" class="mail">
+				<input type="text" class="mail__input" placeholder="Ваше имя" name="">
+				<input type="text" class="mail__input" placeholder="Телефон" name="">
+				<button class="mail__submit">Получить ответ</button>
+			</form>
+			<!--end mail-->
+			<div class="request__desc">
+				<div class="request__text">
+					<p>Если у вас возникнут вопросы,</p>
+					<p>свяжитесь с нами удобным</p>
+					<p>для вас способом:</p>
+				</div>
+				<div class="request__contacts">
+						<div class="request__phone"><i class="icon icon-phone"></i><span>+7 (831)</span> 288-80-80</div>
+					<button class="request__phone-request">Заказать обратный звонок</button>
+					<a href="mailto:akaz@mstroy.ru" class="request__email">@ akaz@mstroy.ru</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--end request-->
+
+	<!--begin args-->
+	<section class="args">
+		<h2 class="args__title">6 аргументов в нашу пользу или почему доверяют нам</h2>
+		<div class="args__bg">
+			<div class="args__list">
+				<div class="args__item args__item_left">
+					<div class="args__number">01</div>
+					<div class="args__text">
+						<div class="args__name">ПОСТАВКА ОТ 1 ДНЯ</div>
+						<div class="args__desc">Оцените оперативность комплектации и отправки заказа: доставка по Нижнему Новгороду занимает 1-7 дней, по Нижнегородской области — 2-3 недели</div>
+					</div>
+				</div>
+
+				<div class="args__item">
+					<div class="args__number">04</div>
+					<div class="args__text">
+						<div class="args__name">НАЛИЧИЕ НА СКЛАДЕ</div>
+						<div class="args__desc">Заказывайте сейчас — на складе в наличии все строительный материалы <br>(номер для справок: +7 (831) 288-80-80)</div>
+					</div>
+				</div>
+
+				<div class="args__item args__item_left">
+					<div class="args__number">02</div>
+					<div class="args__text">
+						<div class="args__name">ГАРАНТИЯ КАЧЕСТВА</div>
+						<div class="args__desc">Увеличьте срок эксплуатации стройматериалов за счет сертифицированных изделий от европейских и российских производителей</div>
+					</div>
+				</div>
+
+				<div class="args__item">
+					<div class="args__number">05</div>
+					<div class="args__text">
+						<div class="args__name">СОБСТВЕННЫЙ АВТОПАРК</div>
+						<div class="args__desc">Снижайте затраты на доставке с нашим транспортным отделом, в автопарке которого <br>57 грузовых авто: МАЗ, DAF, ТАТА и АВИА</div>
+					</div>
+				</div>
+
+				<div class="args__item args__item_left">
+					<div class="args__number">03</div>
+					<div class="args__text">
+						<div class="args__name">ЭКОНОМИЯ</div>
+						<div class="args__desc">Получайте стройматериалы по выгодной цене благодаря грамотной логистике и отсутствию дополнительных наценок</div>
+					</div>
+				</div>
+
+				<div class="args__item">
+					<div class="args__number">06</div>
+					<div class="args__text">
+						<div class="args__name">УДОБНАЯ ОПЛАТА</div>
+						<div class="args__desc">Оплачивайте заказ удобным для вас видом безналичного расчета</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--end args-->
+
+	<!--begin terms-->
+	<section class="terms">
+		<div class="wrap">
+			<h2 class="terms__title">Обратите внимание на условия доставки</h2>
+
+			<div class="terms__item terms__item_1">
+				<div class="terms__item-title">Быстро</div>
+				<div class="terms__item-desc">Отгружаем продукцию в течение 24 часов после обработки заказа</div>
+			</div>
+
+			<div class="terms__item terms__item_2">
+				<div class="terms__item-title">27 поставщиков</div>
+				<div class="terms__item-desc">Осуществляем доставку как собственными силами, так и с помощью независимых транспортных компаний.</div>
+			</div>
+
+			<div class="terms__item terms__item_3">
+				<div class="terms__item-title">Выгодно</div>
+				<div class="terms__item-desc">При заказе свыше 15 000 рублей доставка в пределах Нижнего Новгорода бесплатно.</div>
+			</div>
+		</div>
+	</section>
+	<!--end terms-->
+
+	<!--begin comments-->
+	<section class="comments wrap">
+		<h2 class="comments__title">Отзывы наших довольных клиентов</h2>
+		<div class="comments__list">
+			<div class="comments__item">
+				<div class="comments__img">
+					<img src="img/content/photo-1.jpg" alt="photo">
+					<div class="comments__caption">Гесеев Олег</div>
+				</div>
+				<div class="comments__text">
+					<p>Занимаюсь строительством и сотрудничаю с магазином "Мастер-Строй" довольно давно.</p>
+					<p>Что нравится, так это в какое бы то ни было время ни сделал заказ через интернет магазин, заявку обработают и свяжутся всегда быстро. Доставка всегда обсуждается, и время и место.</p>
+					<p>На прошлой неделе заказывал фанеру на пол и крепежные материалы, доставку оформил сразу на объект. Привезли как и договаривались в тот же день.</p>
+					<p>Доставка выгодная, да и помощь в отгрузке не бывает лишней, конечно за это приходится доплатить.</p>
+				</div>
+			</div>
+
+			<div class="comments__item">
+				<div class="comments__img">
+					<img src="img/content/photo-2.jpg" alt="photo">
+					<div class="comments__caption">Гесеев Олег</div>
+				</div>
+				<div class="comments__text">
+					<p>Занимаюсь строительством и сотрудничаю с магазином "Мастер-Строй" довольно давно.</p>
+					<p>Что нравится, так это в какое бы то ни было время ни сделал заказ через интернет магазин, заявку обработают и свяжутся всегда быстро. Доставка всегда обсуждается, и время и место.</p>
+					<p>На прошлой неделе заказывал фанеру на пол и крепежные материалы, доставку оформил сразу на объект. Привезли как и договаривались в тот же день.</p>
+					<p>Доставка выгодная, да и помощь в отгрузке не бывает лишней, конечно за это приходится доплатить.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--end comments-->
+
+	<!--begin cert-->
+	<section class="cert wrap">
+		<h2 class="cert__title">Высокое качество продукции подтверждено документально</h2>
+		<p class="cert__desc">Продукция компании сертифицирована в России и Европе, имеет маркировку и идентификационный номер партии, по которому можно определить дату производства и состав материала.</p>
+		<p class="cert__desc">ООО “Мастер-Строй и Ко” - одна из крупнейших оптово-розничных сетей на нижегородском строительном рынке. На протяжении 18 лет мы предлагаем только качественные материалы для ремонта и отделки помещений.</p>
+		<p class="cert__desc">Наша основная задача - внести свой вклад в совершенствование культуры строительства жилья, объектов социального и промышленного назначения, работать оперативно и качественно, повышая уровень обслуживания клиентов.</p>
+
+		<!--begin slider-->
+		<div class="slider">
+			<div class="slider__item slider__item_left"><img src="img/content/cert-1.jpg" alt="certificate" class="slider__img"></div>
+			<div class="slider__item slider__item_center"><img src="img/content/cert-2.jpg" alt="certificate" class="slider__img"></div>
+			<div class="slider__item slider__item_right"><img src="img/content/cert-1.jpg" alt="certificate" class="slider__img"></div>
+		</div>
+		<!--end slider-->
+	</section>
+	<!--end cert-->
+
+	<!--begin action-->
+	<section class="action">
+		<div class="wrap">
+			<h2 class="action__title">Оставьте заявку на расчет стоимости заказа и условий поставки</h2>
+			<!--begin mail-->
+			<form action="#" class="mail">
+				<input type="text" class="mail__input" placeholder="Ваше имя" name="">
+				<input type="text" class="mail__input" placeholder="Телефон" name="">
+				<button class="mail__submit">Получить ответ</button>
+			</form>
+			<!--end mail-->
+			<div class="action__desc">*Ваши данные в полной безопасности и не будут переданы третьим лицам</div>
+			<div class="action__title">Внимание, акция!</div>
+			<div class="action__subtitle">При заказе свыше 15 000 рублей доставка по городу БЕСПЛАТНАЯ</div>
+			<div class="counter">
+				<div class="counter__in">
+					<div class="counter__main"></div>
+					<div class="counter__rect counter__rect_1">
+						<div class="counter__date">дней</div>
+					</div>
+					<div class="counter__rect counter__rect_2">
+						<div class="counter__date">часов</div>
+					</div>
+					<div class="counter__rect counter__rect_3">
+						<div class="counter__date">минут</div>
+					</div>
+					<div class="counter__rect counter__rect_4">
+						<div class="counter__date">секунд</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--end action-->
+
+	<!--begin ask-->
+	<section class="ask">
+		<div class="wrap">
+			<div class="ask__col">
+				<div class="ask__title">У вас остались вопросы?</div>
+				<div class="ask__subtitle">На некоторые из них вы получите ответ прямо сейчас</div>
+				<ul class="ask__list">
+					<li class="ask__item">
+						<p class="ask__question">Как оплатить заказ?</p>
+						<div class="ask__answer">В течении получаса после оформления заказа, по указанным при регистрации контактным данным с Вами свяжется менеджер по продажам, для подтверждения статуса заявки и уточнения условий доставки.</div>
+					</li>
+
+					<li class="ask__item">
+						<p class="ask__question">Возможна ли доставка по Нижнегородской области?</p>
+						<div class="ask__answer">Доставка по Нижегородской области и регионам рассчитывается индивидуально при подтверждении заказа. Предварительную стоимость Вы можете уточнить по телефону: (831) 4-373-000</div>
+					</li>
+
+					<li class="ask__item">
+						<p class="ask__question">Сколько стоит доставка товара?</p>
+						<div class="ask__answer">Стоимость доставки рассчитывается индивидуально и напрямую зависит от массы груза и ценовой политики выбранной вами транспортной компании. Неважно, воспользуетесь ли вы услугами нашего транспорта или сторонней компании, доставка в Нижнем Новгороде при заказе свыше 15 000 руб. для вас будет бесплатной.</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="ask__tool">
+				<div class="ask__tool-in">
+					<div class="ask__tool-title">Остались вопросы?</div>
+					<div class="ask__tool-desc">Звоните, мы всегда на связи</div>
+					<div class="ask__tool-number">(831) 288-80-80</div>
+					<button class="ask__tool-btn">Перезвоните мне</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--end ask-->
+
+	<!--begin map-->
+	<section class="map">
+		<div class="wrap">
+			<h2 class="map__title">Сеть складов "Мастер строй" по всему Нижнему Новгороду</h2>
+			<div class="map__info">
+				<p class="map__position">Офис: 603000, г. Н.Новгород, ул. Воровского, д.3</p>
+				<p class="map__position">Склад №1 - ул. Кузбасская, д.17к2</p>
+				<p class="map__position">Склад №2 - пр. Гагарина, д.25в</p>
+				<p class="map__position">Склад №3 - ул. Полтавская, д. 30</p>
+				<p class="map__position">Склад №4 - ул. Порт-Артурская, д. 12В</p>
+				<p class="map__position">Склад №5 - ул. Геологов, д. 2г.*</p>
+				<p class="map__info-small">Временно, до исправления на картах и навигаторах, адрес - Геологов, д.9Ак1 )</p>
+			</div>
+		</div>
+		<div id="map"></div>
+		<div class="wrap">
+			<div class="map__desc">Доставка по Нижегородской области и регионам рассчитывается индивидуально при подтверждении заказа. Предварительную стоимость Вы можете уточнить по телефону: (831) 4-373-000</div>
+		</div>
+	</section>
+	<!--end map-->
 </main>
+
+<footer class="footer" role="contentinfo">
+	<div class="footer__top">
+		<div class="wrap">
+			<nav class="nav nav_footer" role="navigation">
+				<ul class="nav__list">
+					<li class="nav__item"><a href="#" class="nav__link">О “Мастер-строй и ко”</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">Каталог гипсокартона и ГВЛ</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">Доставка</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">Частые вопросы</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+				</ul>
+			</nav>
+			<div class="footer__info">
+				<a href="index.html" class="footer__logo"><img src="img/logo-white.png" alt="Мастер Строй"></a>
+				<div class="footer__position">603000, г. Н.Новгород, ул. Воровского, д.3</div>
+				<a href="mailto:akaz@mstroy.ru" class="footer__mail">@ akaz@mstroy.ru</a>
+				<div class="footer__phone"><i class="icon icon-phone"></i><span>(831) 288-80-80, </span><span>4-373-111, </span><span>4-373-777, </span><span>4-373-999, </span><span>4-373-300, </span><span>4-373-400</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer__bot">
+		<div class="wrap">
+			<div class="footer__copy">© ООО “Мастер-Строй и Ко”, 1997–2016.</div>
+			<ul class="footer__social">
+				<li class="footer__icon"><a href="#" class="footer__link icon icon-vk"></a></li>
+				<li class="footer__icon"><a href="#" class="footer__link icon icon-tw"></a></li>
+				<li class="footer__icon"><a href="#" class="footer__link icon icon-g"></a></li>
+				<li class="footer__icon"><a href="#" class="footer__link icon icon-fb"></a></li>
+				<li class="footer__icon"><a href="#" class="footer__link icon icon-odn"></a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
 <script src="js/app.js"></script>
 </body>
 </html>

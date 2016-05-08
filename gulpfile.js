@@ -75,16 +75,16 @@ gulp.task('sass', function() {
     ];
 
     return sass('src/sass/*.sass', {
-            sourcemap: true,
+            // sourcemap: true,
             style: 'expanded'
         })
         .on('error', function(err) {
             console.error('Error', err.message);
         })
         .pipe(postcss(processors))
-        // .pipe(cssmin())
-        // .pipe(rename({suffix: '.min'}))
-        .pipe(sourcemaps.write('./'))
+        .pipe(cssmin())
+        .pipe(rename({suffix: '.min'}))
+        // .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('build/css/'));
 });
 

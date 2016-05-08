@@ -1,5 +1,10 @@
 $icons: (0:0)
-$icons: map-merge($icons,(phone: (X: 0px, Y:0px, W: 17px, H: 23px, TW: 17px, TH: 23px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(fb: (X: 0px, Y:0px, W: 30px, H: 28px, TW: 97px, TH: 60px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(g: (X: -34px, Y:0px, W: 30px, H: 28px, TW: 97px, TH: 60px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(odn: (X: -34px, Y:-32px, W: 29px, H: 28px, TW: 97px, TH: 60px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(phone: (X: -68px, Y:-32px, W: 17px, H: 23px, TW: 97px, TH: 60px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(tw: (X: 0px, Y:-32px, W: 30px, H: 28px, TW: 97px, TH: 60px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(vk: (X: -68px, Y:0px, W: 29px, H: 28px, TW: 97px, TH: 60px, IMG: '../img/icons.png')))
 
 
 // Gets an attribute from the sass map
@@ -41,9 +46,39 @@ $icons: map-merge($icons,(phone: (X: 0px, Y:0px, W: 17px, H: 23px, TW: 17px, TH:
 @mixin spr($i)
 	+sprite-position-retina($i)
 
+.icon-fb
+	width: 30px
+	height: 28px
+	background-image: url('../img/icons.png')
+	background-position: 0px 0px
+	background-size: 97px 60px
+.icon-g
+	width: 30px
+	height: 28px
+	background-image: url('../img/icons.png')
+	background-position: -34px 0px
+	background-size: 97px 60px
+.icon-odn
+	width: 29px
+	height: 28px
+	background-image: url('../img/icons.png')
+	background-position: -34px -32px
+	background-size: 97px 60px
 .icon-phone
 	width: 17px
 	height: 23px
 	background-image: url('../img/icons.png')
-	background-position: 0px 0px
-	background-size: 17px 23px
+	background-position: -68px -32px
+	background-size: 97px 60px
+.icon-tw
+	width: 30px
+	height: 28px
+	background-image: url('../img/icons.png')
+	background-position: 0px -32px
+	background-size: 97px 60px
+.icon-vk
+	width: 29px
+	height: 28px
+	background-image: url('../img/icons.png')
+	background-position: -68px 0px
+	background-size: 97px 60px
