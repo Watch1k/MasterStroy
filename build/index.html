@@ -11,20 +11,6 @@
 	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
 	<link rel="stylesheet" media="all" href="css/screen.min.css" >
 	<!--[if IE]><script src="js/lib/html5shiv.js"></script><![endif]-->
-	<script src="http://maps.googleapis.com/maps/api/js"></script>
-	<script>
-		function initialize() {
-			var mapProp = {
-				center:new google.maps.LatLng(51.508742,-0.120850),
-				zoom:15,
-				scrollwheel: false,
-				draggable: true,
-				mapTypeId:google.maps.MapTypeId.ROADMAP
-			};
-			var map=new google.maps.Map(document.getElementById("map"),mapProp);
-		}
-		google.maps.event.addDomListener(window, 'load', initialize);
-	</script>
 </head>
 <body>
 <header class="header" role="banner">
@@ -683,6 +669,9 @@
 		</div>
 	</div>
 </footer>
+
+<script src="http://maps.googleapis.com/maps/api/js"></script>
 <script src="js/app.js"></script>
+
 </body>
 </html>
