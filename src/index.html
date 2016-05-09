@@ -9,7 +9,7 @@
 	<meta name="theme-color" content="#fff">
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
-	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<link rel="stylesheet" media="all" href="css/screen.min.css" >
 	<!--[if IE]><script src="js/lib/html5shiv.js"></script><![endif]-->
 </head>
 <body>
@@ -34,6 +34,10 @@
 
 	<!--begin header__bot-->
 	<section class="header__bot">
+		<button id="menu_toggle">
+			<span>toggle menu</span>
+		</button>
+
 		<div class="header__logo">
 			<a href="index.html" class="header__logo-link">
 				<img src="img/logo.png" alt="Мастер Строй">
@@ -57,29 +61,49 @@
 <main class="main" role="main">
 	<!--begin screen-->
 	<section class="screen">
-		<div class="wrap">
-			<h2 class="screen__title">
-				<span class="screen__title-top">Гипсокартон </span><span class="screen__title-bot">и ГВЛ</span>
-			</h2>
-
-			<!--begin category-->
-			<div class="category category_screen">
-				<div class="category__title">Категории:</div>
-				<ul class="category__list">
-					<li class="category__item">Гипсокартон</li>
-					<li class="category__item">ГВЛ</li>
-					<li class="category__item">Аквапанель “КНАУФ” (KNAUF)</li>
-					<li class="category__item">Пазо-Гребневая Плита Гипсополимер</li>
-					<li class="category__item">Файерборд “КНАУФ” (KNAUF)</li>
-				</ul>
-				<div class="category__caption">
-					<button class="category__btn category__btn_mod">Сформировать он-лайн запрос</button>
-					<div class="category__vs">или</div>
-					<button class="category__btn popup-request">Заказать консультацию</button>
-				</div>
+		<div class="screen__slider">
+			<div class="screen__item screen__item_1">
+				<h2 class="screen__title">
+					<span class="screen__title-top">Гипсокартон </span><span class="screen__title-bot">и ГВЛ</span>
+				</h2>
 			</div>
-			<!--end category-->
+
+			<div class="screen__item screen__item_2">
+				<h2 class="screen__title">
+					<span class="screen__title-top">Гипсокартон </span><span class="screen__title-bot">и ГВЛ</span>
+				</h2>
+			</div>
+
+			<div class="screen__item screen__item_3">
+				<h2 class="screen__title">
+					<span class="screen__title-top">Гипсокартон </span><span class="screen__title-bot">и ГВЛ</span>
+				</h2>
+			</div>
+
+			<div class="screen__item screen__item_4">
+				<h2 class="screen__title">
+					<span class="screen__title-top">Гипсокартон </span><span class="screen__title-bot">и ГВЛ</span>
+				</h2>
+			</div>
 		</div>
+
+		<!--begin category-->
+		<div class="category category_screen">
+			<div class="category__title">Категории:</div>
+			<ul class="category__list">
+				<li class="category__item">Гипсокартон</li>
+				<li class="category__item">ГВЛ</li>
+				<li class="category__item">Аквапанель “КНАУФ” (KNAUF)</li>
+				<li class="category__item">Пазо-Гребневая Плита Гипсополимер</li>
+				<li class="category__item">Файерборд “КНАУФ” (KNAUF)</li>
+			</ul>
+			<div class="category__caption">
+				<button class="category__btn category__btn_mod">Сформировать он-лайн запрос</button>
+				<div class="category__vs">или</div>
+				<button class="category__btn popup-request">Заказать консультацию</button>
+			</div>
+		</div>
+		<!--end category-->
 	</section>
 	<!--end screen-->
 
@@ -317,66 +341,70 @@
 	<!--begin result-->
 	<section class="result">
 		<h2 class="result__title">Оставьте заявку на расчет стоимости заказа и условий поставки</h2>
-		<div class="result__table">
-			<div class="result__thead">
-					<div class="wrap">
-						<div class="result__inner">
-							<div class="result__td"></div>
-							<div class="result__td">Наименование</div>
-							<div class="result__td">Кол-во</div>
-							<div class="result__td">Вес</div>
-							<div class="result__td">Цена</div>
-							<div class="result__td">Сумма</div>
-						</div>
-					</div>
-			</div>
-			<div class="result__tbody">
-				<div class="result__tr">
-					<div class="wrap">
-						<div class="result__inner">
-							<div class="result__td">
-								<img src="img/content/table-1.jpg" alt="image" class="result__img">
+		<div class="wrap-mobile">
+			<div class="result__table-wrap">
+				<div class="result__table">
+					<div class="result__thead">
+							<div class="wrap">
+								<div class="result__inner">
+									<div class="result__td"></div>
+									<div class="result__td">Наименование</div>
+									<div class="result__td">Кол-во</div>
+									<div class="result__td">Вес</div>
+									<div class="result__td">Цена</div>
+									<div class="result__td">Сумма</div>
+								</div>
 							</div>
-							<div class="result__td">ГКЛ] Гипсокартонный лист, КНАУФ (Knauf) (1,2*2,5м) 9,5мм</div>
-							<div class="result__td">
-								<input type="text" class="result__input" value="1">
-								<span class="result__input-desc">шт</span>
-							</div>
-							<div class="result__td">21.3 кг</div>
-							<div class="result__td">199 руб.</div>
-							<div class="result__td">199 руб.</div>
-						</div>
 					</div>
-				</div>
+					<div class="result__tbody">
+						<div class="result__tr">
+							<div class="wrap">
+								<div class="result__inner">
+									<div class="result__td">
+										<img src="img/content/table-1.jpg" alt="image" class="result__img">
+									</div>
+									<div class="result__td">ГКЛ] Гипсокартонный лист, КНАУФ (Knauf) (1,2*2,5м) 9,5мм</div>
+									<div class="result__td">
+										<input type="text" class="result__input" value="1">
+										<span class="result__input-desc">шт</span>
+									</div>
+									<div class="result__td">21.3 кг</div>
+									<div class="result__td">199 руб.</div>
+									<div class="result__td">199 руб.</div>
+								</div>
+							</div>
+						</div>
 
-				<div class="result__tr">
-					<div class="wrap">
-						<div class="result__inner">
-							<div class="result__td">
-								<img src="img/content/table-1.jpg" alt="image" class="result__img">
+						<div class="result__tr">
+							<div class="wrap">
+								<div class="result__inner">
+									<div class="result__td">
+										<img src="img/content/table-1.jpg" alt="image" class="result__img">
+									</div>
+									<div class="result__td">ГКЛ] Гипсокартонный лист, КНАУФ (Knauf) (1,2*2,5м) 9,5мм</div>
+									<div class="result__td">
+										<input type="text" class="result__input" value="1">
+										<span class="result__input-desc">шт</span>
+									</div>
+									<div class="result__td">21.3 кг</div>
+									<div class="result__td">199 руб.</div>
+									<div class="result__td">199 руб.</div>
+								</div>
 							</div>
-							<div class="result__td">ГКЛ] Гипсокартонный лист, КНАУФ (Knauf) (1,2*2,5м) 9,5мм</div>
-							<div class="result__td">
-								<input type="text" class="result__input" value="1">
-								<span class="result__input-desc">шт</span>
-							</div>
-							<div class="result__td">21.3 кг</div>
-							<div class="result__td">199 руб.</div>
-							<div class="result__td">199 руб.</div>
 						</div>
 					</div>
-				</div>
-			</div>
 
-			<div class="result__tfoot">
-				<div class="wrap">
-					<div class="result__inner">
-						<div class="result__td"></div>
-						<div class="result__td">Итого:</div>
-						<div class="result__td">2 шт</div>
-						<div class="result__td">42.6 кг</div>
-						<div class="result__td">398 руб</div>
-						<div class="result__td">398 руб</div>
+					<div class="result__tfoot">
+						<div class="wrap">
+							<div class="result__inner">
+								<div class="result__td"></div>
+								<div class="result__td">Итого:</div>
+								<div class="result__td">2 шт</div>
+								<div class="result__td">42.6 кг</div>
+								<div class="result__td">398 руб</div>
+								<div class="result__td">398 руб</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -389,10 +417,11 @@
 		<h2 class="request__title">Оставьте заявку на расчет стоимости заказа и условий поставки</h2>
 		<div class="request__inner">
 			<!--begin mail-->
-			<form action="#" class="mail">
-				<input type="text" class="mail__input" placeholder="Ваше имя" name="">
-				<input type="text" class="mail__input" placeholder="Телефон" name="">
+			<form class="mail">
+				<input type="text" class="mail__input" placeholder="Ваше имя" name="mail_name">
+				<input type="text" class="mail__input" placeholder="Телефон" name="mail_phone">
 				<button class="mail__submit">Получить ответ</button>
+				<div class="mail__help">Письмо успешно отправлено</div>
 			</form>
 			<!--end mail-->
 			<div class="request__desc">
@@ -418,6 +447,7 @@
 			<div class="args__list">
 				<div class="args__item args__item_left">
 					<div class="args__number">01</div>
+					<div class="args__number args__number_mobile">01</div>
 					<div class="args__text">
 						<div class="args__name">ПОСТАВКА ОТ 1 ДНЯ</div>
 						<div class="args__desc">Оцените оперативность комплектации и отправки заказа: доставка по Нижнему Новгороду занимает 1-7 дней, по Нижнегородской области — 2-3 недели</div>
@@ -426,6 +456,7 @@
 
 				<div class="args__item">
 					<div class="args__number">04</div>
+					<div class="args__number args__number_mobile">02</div>
 					<div class="args__text">
 						<div class="args__name">НАЛИЧИЕ НА СКЛАДЕ</div>
 						<div class="args__desc">Заказывайте сейчас — на складе в наличии все строительный материалы <br>(номер для справок: +7 (831) 288-80-80)</div>
@@ -434,6 +465,7 @@
 
 				<div class="args__item args__item_left">
 					<div class="args__number">02</div>
+					<div class="args__number args__number_mobile">03</div>
 					<div class="args__text">
 						<div class="args__name">ГАРАНТИЯ КАЧЕСТВА</div>
 						<div class="args__desc">Увеличьте срок эксплуатации стройматериалов за счет сертифицированных изделий от европейских и российских производителей</div>
@@ -442,6 +474,7 @@
 
 				<div class="args__item">
 					<div class="args__number">05</div>
+					<div class="args__number args__number_mobile">04</div>
 					<div class="args__text">
 						<div class="args__name">СОБСТВЕННЫЙ АВТОПАРК</div>
 						<div class="args__desc">Снижайте затраты на доставке с нашим транспортным отделом, в автопарке которого <br>57 грузовых авто: МАЗ, DAF, ТАТА и АВИА</div>
@@ -450,6 +483,7 @@
 
 				<div class="args__item args__item_left">
 					<div class="args__number">03</div>
+					<div class="args__number args__number_mobile">05</div>
 					<div class="args__text">
 						<div class="args__name">ЭКОНОМИЯ</div>
 						<div class="args__desc">Получайте стройматериалы по выгодной цене благодаря грамотной логистике и отсутствию дополнительных наценок</div>
@@ -458,6 +492,7 @@
 
 				<div class="args__item">
 					<div class="args__number">06</div>
+					<div class="args__number args__number_mobile">06</div>
 					<div class="args__text">
 						<div class="args__name">УДОБНАЯ ОПЛАТА</div>
 						<div class="args__desc">Оплачивайте заказ удобным для вас видом безналичного расчета</div>
@@ -546,10 +581,11 @@
 		<div class="wrap">
 			<h2 class="action__title">Оставьте заявку на расчет стоимости заказа и условий поставки</h2>
 			<!--begin mail-->
-			<form action="#" class="mail">
-				<input type="text" class="mail__input" placeholder="Ваше имя" name="">
-				<input type="text" class="mail__input" placeholder="Телефон" name="">
+			<form class="mail">
+				<input type="text" class="mail__input" placeholder="Ваше имя" name="mail_name">
+				<input type="text" class="mail__input" placeholder="Телефон" name="mail_phone">
 				<button class="mail__submit">Получить ответ</button>
+				<div class="mail__help">Письмо успешно отправлено</div>
 			</form>
 			<!--end mail-->
 			<div class="action__desc">*Ваши данные в полной безопасности и не будут переданы третьим лицам</div>
@@ -677,10 +713,11 @@
 		<div class="popup__title">Закажите консультацию</div>
 
 		<div class="popup__content">
-			<form action="#" class="popup__form">
-				<input type="text" class="popup__input" placeholder="Ваше имя">
-				<input type="text" class="popup__input" placeholder="Телефон">
+			<form class="popup__form" id="mailConsultation">
+				<input type="text" class="popup__input" placeholder="Ваше имя" name="mail_name" required>
+				<input type="text" class="popup__input" placeholder="Телефон" name="mail_phone" required>
 				<button class="popup__submit">Заказать консультацию</button>
+				<div class="popup__help">Письмо успешно отправлено</div>
 			</form>
 
 			<div class="popup__desc">*Ваши данные в полной безопасности и не будут переданы третьим лицам</div>

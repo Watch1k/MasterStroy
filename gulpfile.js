@@ -4,6 +4,9 @@ var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     postcss = require('gulp-postcss'),
+    concat = require('gulp-concat'),
+    merge = require('merge-stream'),
+    streamqueue = require('streamqueue'),
     autoprefixer = require('autoprefixer'),
     rigger = require('gulp-rigger'),
     spritesmith = require('gulp.spritesmith'),
@@ -74,18 +77,23 @@ gulp.task('sass', function() {
         })
     ];
 
-    return sass('src/sass/*.sass', {
+    return streamqueue({ objectMode: true },
+        sass('src/sass/*.sass', {
             // sourcemap: true,
-            style: 'expanded'
+            style: 'nested'
         })
-        .on('error', function(err) {
-            console.error('Error', err.message);
-        })
-        .pipe(postcss(processors))
-        // .pipe(cssmin())
-        // .pipe(rename({suffix: '.min'}))
-        // .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest('build/css/'));
+            .on('error', function(err) {
+                console.error('Error', err.message);
+            })
+            .pipe(postcss(processors))
+            .pipe(rigger())
+            .pipe(sourcemaps.write('./'))
+            .pipe(gulp.dest('build/css/')),
+        gulp.src(src.root + '/css/*.css')
+    )
+        .pipe(concat('screen.min.css'))
+        .pipe(cssmin())
+        .pipe(gulp.dest('build/css'))
 });
 
 // sprite
@@ -157,7 +165,7 @@ gulp.task('copy', function() {
     gulp.src('src/img/**')
         .pipe(gulp.dest('build/img/'));
     gulp.src('src/fonts/*.*')
-        .pipe(gulp.dest('build/css/lib/fonts/'));
+        .pipe(gulp.dest('build/css/fonts/'));
     gulp.src('src/css/**')
         .pipe(gulp.dest('build/css/lib/'));
     gulp.src('src/video/*.*')
@@ -192,7 +200,7 @@ gulp.task('browser-sync', function() {
         notify: false,
         ghostMode: false,
         online: false,
-        open: true
+        open: false
     });
 });
 

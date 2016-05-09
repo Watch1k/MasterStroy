@@ -13,12 +13,39 @@ $(document).ready(function(){
 		});
 	}());
 
+	// nav toogle
+	$('#menu_toggle').on('click', function () {
+		$(this).toggleClass('is-active');
+		$('.nav_header').slideToggle();
+	});
+
+	// Screen slider
+	$('.screen__slider').owlCarousel({
+		loop: true,
+		items: 1,
+		autoplay:true,
+		autoplayTimeout:2000,
+		animateIn: 'fadeIn',
+		animateOut: 'fadeOut'
+	});
+
 	// Slider
 	$('.slider').owlCarousel({
 		loop: true,
-		margin: 100,
 		center: true,
-		items: 3
+		items: 3,
+		responsive: {
+			0: {
+				margin: 20,
+				items: 2
+			},
+			480: {
+				margin: 50
+			},
+			768: {
+				margin: 100
+			}
+		}
 	});
 
 	// Custom Navigation Events
@@ -76,5 +103,57 @@ $(document).ready(function(){
 			$('.popup_request').fadeOut();
 		}
 	});
+	
+	// input phone mask
+	$('input[name="mail_phone"]').inputmask({"mask": "(999) 999-9999"});
+
+	// Ajax Form Consultation
+	(function () {
+		var mailConsultation = $('#mailConsultation');
+		mailConsultation.submit(function (e) {
+			e.preventDefault();
+			var post_data = mailConsultation.serialize();
+
+			//Ajax post data to server
+			$.post('mailConsultation.php', post_data, function(response){
+				if (response.type == 'error'){
+					// your code here
+				} else {
+					// your code here
+					$('.popup__help').slideDown();
+					setTimeout(function () {
+						$('.popup__help').slideUp();
+						mailConsultation.trigger('reset');
+						$('.popup_request').fadeOut();
+					},5000);
+				}
+			}, 'json');
+		});
+	}());
+
+	// Ajax Form Delivery
+	(function () {
+		var mailDelivery = $('.mail');
+		mailDelivery.submit(function (e) {
+			e.preventDefault();
+			var el = $(this);
+			var post_data = el.serialize();
+
+			//Ajax post data to server
+			$.post('mailDelivery.php', post_data, function(response){
+				if (response.type == 'error'){
+					// your code here
+				} else {
+					// your code here
+					$('.mail__help').slideDown();
+					setTimeout(function () {
+						$('.mail__help').slideUp();
+						el.trigger('reset');
+						$('.popup_request').fadeOut();
+					},5000);
+				}
+			}, 'json');
+		});
+	}());
 	
 });

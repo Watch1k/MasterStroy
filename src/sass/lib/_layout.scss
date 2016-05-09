@@ -4,8 +4,8 @@ $susy: (
 	gutters: 3/7,
 	gutter-position: inside,
 	debug: (
-		image: show,
-		inspect: true,
+		image: hide,
+		inspect: false,
 		output: overlay
 	),
 );
