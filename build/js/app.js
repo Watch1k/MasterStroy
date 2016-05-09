@@ -106,7 +106,7 @@ $(document).ready(function(){
 		loop: true,
 		items: 1,
 		autoplay:true,
-		autoplayTimeout:2000,
+		autoplayTimeout: 10000,
 		animateIn: 'fadeIn',
 		animateOut: 'fadeOut'
 	});

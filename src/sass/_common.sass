@@ -234,27 +234,59 @@ body
 	 Footer
 	 ========================================================================== */
 .footer
-	+r(1199)
-		display: none
 	&__top
 		padding-top: 20px
 		padding-bottom: 30px
 		color: #ffffff
 		background-color: $black
+		+r(479)
+			padding-top: 5px
+			padding-bottom: 15px
 	&__info
 		margin-top: 55px
 		+span(full no-gutters)
+		+r(1023)
+			margin-top: 20px
+		+r(767)
+			margin-top: 0
 	&__logo
 		+span(4)
+		+r(1023)
+			+span(3)
+		+r(767)
+			margin-top: 20px
+			+gallery(6)
+		img
+			width: 100%
+			height: auto
+			vertical-align: bottom
 	&__position
 		+span(2 no-gutters)
 		+push(1)
+		+r(767)
+			margin-top: 20px
+			+gallery(6)
+			+push(0)
+		+r(479)
+			font-size: 13px
 	&__mail
 		font-family: $circe
 		font-size: 20px
 		+span(2)
+		+r(1023)
+			+span(3)
+		+r(767)
+			margin-top: 20px
+			+gallery(6)
+		+r(479)
+			font-size: 13px
 	&__phone
 		+span(3)
+		+r(767)
+			margin-top: 20px
+			+gallery(6)
+		+r(479)
+			font-size: 13px
 		span
 			display: inline-block
 			margin-right: 5px
@@ -266,9 +298,15 @@ body
 		margin-top: 8px
 		font-size: 14px
 		+span(6)
+		+r(479)
+			margin-top: 0
+			font-size: 12px
+			+span(5)
 	&__social
 		text-align: right
 		+span(6)
+		+r(479)
+			+span(7)
 	&__icon
 		display: inline-block
 		vertical-align: middle
@@ -604,10 +642,15 @@ body
 	padding-top: 40px
 	padding-bottom: 80px
 	background-color: #eeeeee
+	+r(479)
+		padding-top: 30px
+		padding-bottom: 50px
 	&__title
 		font-size: 48px
 		font-weight: normal
 		text-align: center
+		+prefix(gutter())
+		+suffix(gutter())
 		+r(1023)
 			font-size: 40px
 		+r(767)
@@ -655,10 +698,12 @@ body
 			font-size: 14px
 /*---------------------- Purchase -----------------------*/
 .purchase
-	max-width: 100wv
 	overflow: hidden
 	padding-top: 70px
 	padding-bottom: 70px
+	+r(479)
+		padding-top: 20px
+		padding-bottom: 50px
 	&__list
 		+span(7)
 		+layout(after)
@@ -879,6 +924,9 @@ body
 .request
 	padding-top: 60px
 	padding-bottom: 75px
+	+r(479)
+		padding-top: 25px
+		padding-bottom: 40px
 	&__title
 		font-family: $circe
 		font-size: 48px
@@ -1063,6 +1111,8 @@ body
 		padding-bottom: 60px
 		background: url('../img/bg/bg-3.jpg') center center no-repeat
 		background-size: cover
+		+r(479)
+			padding-top: 40px
 	&__list
 		color: #ffffff
 		line-height: 1
@@ -1111,6 +1161,8 @@ body
 .terms
 	padding-top: 60px
 	background-color: #f9f9f9
+	+r(479)
+		padding-top: 20px
 	.wrap
 		position: relative
 		height: 580px
@@ -1179,6 +1231,8 @@ body
 .comments
 	padding-top: 50px
 	padding-bottom: 50px
+	+r(479)
+		padding-top: 20px
 	&__title
 		font-family: $circe
 		font-size: 48px
@@ -1319,6 +1373,10 @@ body
 		margin-bottom: 40px
 		+span(10)
 		+push(1)
+		+r(767)
+			font-size: 16px
+		+r(479)
+			font-size: 14px
 	&__subtitle
 		margin-top: 30px
 		text-align: center
@@ -1502,6 +1560,9 @@ body
 .map
 	padding-top: 40px
 	padding-bottom: 50px
+	+r(479)
+		padding-top: 10px
+		padding-bottom: 20px
 	.wrap
 		position: relative
 	&__title
@@ -1544,6 +1605,8 @@ body
 			color: $black
 			+span(full)
 			background-color: transparent
+		+r(479)
+			margin-top: 0
 		&-small
 			margin-top: 35px
 			font-size: 16px
