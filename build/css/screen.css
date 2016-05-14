@@ -1590,6 +1590,8 @@ body {
     margin-top: 40px;
     padding-bottom: 50px; }
   .result__table {
+    margin-left: auto;
+    margin-right: auto;
     width: 1200px; }
   .result__thead {
     padding-bottom: 3px;

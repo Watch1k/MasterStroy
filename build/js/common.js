@@ -155,5 +155,16 @@ $(document).ready(function(){
 			}, 'json');
 		});
 	}());
+
+	function toNumber(el) {
+		if (el === itemPrice) {
+			el = el.slice(1,-1);
+		}
+		el = el.match(/[\d\.]+/g);
+		if (el != null) {
+			el = el.toString();
+		}
+		return el;
+	}
 	
 });
